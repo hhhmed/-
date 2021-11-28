@@ -1,0 +1,14 @@
+import requests 
+from pprint import pprint
+
+city = input('Enter your city:')
+url = 'https://api.openweathermap.org/data/2.5/weather?q=Minsk&appid=3adb0a456fbc3b07e7e4751282d6098d'.format(city)
+res = requests.get(url)
+data = res.json()
+print(res) 
+pprint(data)
+
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
